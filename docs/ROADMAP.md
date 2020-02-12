@@ -33,6 +33,52 @@ We would like to encourage community contributions by make available to the
 community a list of GH issues that we want to finish in a short term by using
 the `help wanted` and `2020Qx` labels.
 
+## Q2 2020 Roadmap
+
+### Overview
+
+- Finish migration guide for both general runtime and authentication &
+  authorization.
+- Implement the feature parity tasks that are highly requested by users
+- Finish the APIC/LB integration
+- Continue with bugs and developer experience improvements
+
+### Scope
+
+#### Migration guide
+
+- Complete
+  [Migration guide between LB3 and LB4 MVP](https://github.com/strongloop/loopback-next/issues/453)
+- Migrate LB3 SDK client: Spike on migrating Angular client. Will ask for user
+  feedback if there is a need for Android/iOS/other SDK client.
+
+#### Features / Feature Parity with high user votes
+
+- [File upload with multipart/form-data](https://github.com/strongloop/loopback-next/issues/1873):
+  improve docs/examples
+- [Custom visual style of REST API Explorer](https://github.com/strongloop/loopback-next/issues/2023)
+- [ENUM type](https://github.com/strongloop/loopback-next/issues/3033): good
+  candidate to ask for community contribution
+
+#### API Connect/LB integration
+
+- Make sure there is documentation how one can import OpenAPIv3 from LoopBack
+  and import into API Connect. Documentation could be in loopback.io or API
+  Connect Knowledge Center
+- Update APIC toolkit to include LoopBack 4
+
+#### Tech debt / infrastructure
+
+- Replace "request" with something else
+  https://github.com/strongloop/loopback-next/issues/2672
+- Investigate the possibility to reduce build time, e.g.
+  [Use TypeScript project reference with 3.8](https://github.com/strongloop/loopback-next/issues/2609),
+  using yarn/pnpm instead of npm.
+- Investigate the possibility to reduce test time, e.g. run mocha tests in
+  parallel.
+
+---
+
 ## Q1 2020 Roadmap
 
 ### Overview
