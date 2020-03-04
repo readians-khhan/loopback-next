@@ -106,6 +106,26 @@ export function belongsToRelationAcceptance(
       expect(result).to.be.undefined();
     });
 
+    it('queries entities with null foreign key', async () => {
+      const customer = await customerRepo.create({
+        name: 'Thor',
+      });
+
+      // order with customer relation
+      await orderRepo.create({
+        customerId: customer.id,
+        description: 'Take Out',
+      });
+
+      // order without customer relation
+      await orderRepo.create({
+        description: 'Dine in',
+      });
+
+      const results = await orderRepo.find({include: [{relation: 'customer'}]});
+      expect(results.length).to.equal(2);
+    });
+
     it('throws EntityNotFound error when the related model does not exist', async () => {
       const deletedCustomer = await customerRepo.create({
         name: 'Order McForder',
