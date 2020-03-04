@@ -14,6 +14,7 @@ export * from './model';
 export * from './query';
 export * from './relations';
 export * from './repositories';
+export * from './repository-builder';
 export * from './transaction';
 export * from './type-resolver';
 export * from './types';
